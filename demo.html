@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Le jour se lève, sur le village...</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4e6b3;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .top-bar {
+      text-align: center;
+      background-color: rgba(60, 40, 20, 0.85);
+      margin: 50px auto 20px;
+      padding: 20px;
+      width: 500px;
+      border-radius: 10px;
+    }
+
+    .top-bar h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .top-bar button {
+      background-color: #f4c542;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .game-area {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+
+    .players-list, .chat-box {
+      background-color: rgba(60, 40, 20, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      height: 400px;
+      overflow: auto;
+    }
+
+    .players-list {
+      width: 300px;
+    }
+
+    .players-list table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .players-list th, .players-list td {
+      padding: 10px;
+      border-bottom: 1px solid #bfa77f;
+      text-align: left;
+    }
+
+    .status-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background-image: url('status-icon.png');
+      background-size: contain;
+    }
+
+    .chat-box {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .chat-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .chat-tabs div {
+      padding: 5px 10px;
+      background-color: #7e5e3c;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chat-messages {
+      background-color: #fdf4dc;
+      color: #000;
+      padding: 10px;
+      height: 300px;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+
+    .chat-input {
+      display: flex;
+    }
+
+    .chat-input input {
+      flex-grow: 1;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .chat-input button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      background-color: #b2833c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .top-right-time {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #6a472e;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    .profile {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #5a2d23;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile">
+    <img src="avatar.png" alt="avatar">
+  </div>
+  <div class="top-right-time">
+    🌙 - 00:00
+  </div>
+  <div class="container">
+    <div class="top-bar">
+      <h1>Le jour se lève, sur le village ....</h1>
+      <button>Lancer la partie</button>
+    </div>
+
+    <div class="game-area">
+      <div class="players-list">
+        <table>
+          <tr><th>Nom du Joueur</th><th>Statut</th></tr>
+          <tr><td>Alice</td><td><span class="status-icon"></span></td></tr>
+          <tr><td>Bob</td><td><span class="status-icon"></span></td></tr>
+          <tr><td>Charlie</td><td><span class="status-icon"></span></td></tr>
+          <tr><td>David</td><td><span class="status-icon"></span></td></tr>
+        </table>
+      </div>
+      <div class="chat-box">
+        <div class="chat-tabs">
+          <div>Général</div>
+          <div>Village</div>
+          <div>Loups</div>
+        </div>
+        <div class="chat-messages">
+          <strong>Système:</strong> Chat général
+        </div>
+        <div class="chat-input">
+          <input type="text" placeholder="Écrivez un message...">
+          <button>Envoyer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
